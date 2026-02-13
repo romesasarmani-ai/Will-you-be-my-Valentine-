@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Ultimate Love Challenge</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <title>The Love Challenge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <style>
-        body { background: #120507; color: #ffb3c1; font-family: 'Dancing Script', cursive; text-align: center; padding: 20px; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow-x: hidden; }
-        .container { max-width: 500px; width: 90%; background: rgba(255, 255, 255, 0.03); padding: 40px; border-radius: 30px; border: 1px solid #ff4d6d; box-shadow: 0 0 30px rgba(255, 77, 109, 0.1); }
-        h1 { font-family: 'Great Vibes', cursive; font-size: 3rem; color: #ff4d6d; margin-bottom: 20px; }
-        .page { display: none; animation: slideIn 0.8s ease-out; }
+        body { background: #0d0204; color: #ffccd5; font-family: 'Poppins', sans-serif; text-align: center; padding: 20px; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow-x: hidden; }
+        .container { max-width: 500px; width: 95%; background: rgba(255, 20, 60, 0.05); padding: 35px; border-radius: 25px; border: 1px solid #ff0033; box-shadow: 0 0 40px rgba(255, 0, 51, 0.2); }
+        h1 { font-family: 'Dancing Script', cursive; font-size: 3rem; color: #ff0033; margin-bottom: 20px; }
+        .page { display: none; animation: fadeIn 0.8s ease-in-out; }
         .active { display: block; }
-        .btn { background: #ff4d6d; color: white; border: none; padding: 12px 25px; border-radius: 30px; font-size: 1.2rem; cursor: pointer; margin: 10px; font-family: 'Dancing Script'; transition: 0.4s; width: 85%; }
-        .btn:hover { background: #c9184a; transform: scale(1.05); box-shadow: 0 0 15px #ff4d6d; }
-        .text { font-size: 1.4rem; line-height: 1.5; margin-bottom: 25px; color: #ffe5ec; }
-        .spicy { color: #ff4d6d; font-style: italic; font-weight: bold; }
-        @keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .btn { background: #ff0033; color: white; border: none; padding: 14px 20px; border-radius: 50px; font-size: 1.1rem; cursor: pointer; margin: 10px 5px; font-weight: 600; transition: 0.4s; width: 85%; }
+        .btn-no { background: transparent; border: 1px solid #ff4d6d; color: #ff4d6d; }
+        .btn:hover { background: #990022; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(255, 0, 51, 0.4); }
+        .text { font-size: 1.2rem; line-height: 1.6; margin-bottom: 25px; color: #ffe5ec; }
+        .spicy { color: #ff0033; font-weight: 600; font-style: italic; }
+        .kiss-anim { font-size: 5rem; animation: pulse 1.5s infinite; display: block; margin: 20px 0; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.2); } 100% { transform: scale(1); } }
     </style>
 </head>
 <body>
@@ -23,57 +26,64 @@
     <div class="container">
         
         <div id="p1" class="page active">
-            <h1>My King, My Everything... ❤️</h1>
-            <p class="text">Since you said YES, you now have to prove how well you know 'US'. Are you ready to unlock my heart (and maybe more)? 😉</p>
+            <h1>My King... ❤️</h1>
+            <p class="text">Since you said YES, you have to prove you know me. Ready to unlock the heat? 😉</p>
             <button class="btn" onclick="nextPage('p1', 'p2')">I'm Ready, Baby! 🔥</button>
+            <button class="btn btn-no" onclick="alert('No choice now! You have to take the test because you have no other option. 😉🔥')">No, I'm scared...</button>
         </div>
 
         <div id="p2" class="page">
-            <h1>Level 1: Sweet Memories 🍦</h1>
-            <p class="text">What is that one ice cream flavor that I started loving just because of you?</p>
+            <h1>Level 1: Sweet Craving 🍦</h1>
+            <p class="text">Which ice cream flavor did I start loving just because of YOU?</p>
             <button class="btn" onclick="nextPage('p2', 'p3')">Caramel Crunch 🍯✨</button>
-            <button class="btn" onclick="wrongAnswer()">Chocolate (My old favorite!) 🍫</button>
-            <button class="btn" onclick="wrongAnswer()">Strawberry 🍓</button>
+            <button class="btn btn-no" onclick="wrongAnswer()">Chocolate 🍫</button>
         </div>
 
         <div id="p3" class="page">
-            <h1>Level 2: The Forbidden Meal 😈</h1>
-            <p class="text">What is that one "Special Meal" that we both can never say NO to? (Think carefully... it's not on a plate!)</p>
+            <h1>Level 2: The Spicy Meal 😈</h1>
+            <p class="text">What's that one "Special Meal" we never say NO to? (Not on a plate!)</p>
             <button class="btn" onclick="nextPage('p3', 'p4')">Tasting your lips & devouring YOU 💋🔥</button>
-            <button class="btn" onclick="wrongAnswer()">Pizza or Burgers 🍔</button>
-            <button class="btn" onclick="wrongAnswer()">Biryani 🍛</button>
+            <button class="btn btn-no" onclick="wrongAnswer()">Pizza or Burgers 🍔</button>
         </div>
 
         <div id="p4" class="page">
             <h1>Level 3: The Spark 🔥</h1>
-            <p class="text">Close your eyes... can you still feel the heat of our <span class="spicy">First Kiss?</span> The way my lips felt against yours...</p>
-            <p class="text">It wasn't just a touch, it was a promise. Do you remember how fast your heart was beating?</p>
+            <p class="text">Remember our <span class="spicy">First Kiss?</span> The heat, the promise... Can you still feel it?</p>
             <button class="btn" onclick="nextPage('p4', 'p5')">I can still feel it... ❤️</button>
+            <button class="btn btn-no" onclick="alert('Impossible! You might say no, but I know one part of you is saying YES and getting out of control... like that night with the phone game! 😉')">I forgot...</button>
         </div>
 
         <div id="p5" class="page">
-            <h1>Level 4: The Touch 🖐️</h1>
-            <p class="text">Remember the first time my hands explored your skin? The shivers, the breathlessness...</p>
-            <p class="text">Every touch of mine is a silent "I love you" and every reaction of yours makes me want you more.</p>
-            <button class="btn" onclick="nextPage('p5', 'p6')">Don't stop thinking... 😉</button>
+            <h1>Level 4: Skin on Skin 🖐️</h1>
+            <p class="text">The way your hands trace my curves... it makes me lose my breath. Don't stop thinking about it.</p>
+            <button class="btn" onclick="nextPage('p5', 'p6')">Take me closer... 😉</button>
+            <button class="btn btn-no" onclick="alert('Don\'t lie! You know you crave this touch as much as I do. 🔥')">Stop it...</button>
         </div>
 
         <div id="p6" class="page">
-            <h1>Level 5: Pure Desire 😈</h1>
-            <p class="text">I want to feel you close to me right now. The way you look at me when you want to be kissed...</p>
-            <p class="text">You have no idea what you do to me. You are my most beautiful addiction.</p>
+            <h1>Level 5: Pure Addiction 😈</h1>
+            <p class="text">I want your breath on my neck and your arms around me. You are my most beautiful sin.</p>
             <button class="btn" onclick="nextPage('p6', 'p7')">The Final Secret... 🗝️</button>
+            <button class="btn btn-no" onclick="alert('You are trapped in my love now, Hubby! No escape! ❤️')">I'm shy...</button>
         </div>
 
         <div id="p7" class="page">
-            <h1>To My Forever Mian G ❤️</h1>
-            <div class="text" style="font-size: 1.2rem; text-align: left;">
-                My Dearest, <br><br>
-                Through these pages, I wanted you to feel the same fire that burns in my heart for you. You are the rhythm to my soul and the desire in my veins. <br><br>
-                Every memory we've made is a treasure, and every touch we've shared is a dream. I promise to keep loving you, teasing you, and wanting you forever.
+            <h1>Forever Mian G ❤️</h1>
+            <p class="text" style="text-align: left; font-size: 1.1rem;">
+                My Dearest Huzaifa, <br><br>
+                Through these pages, I wanted you to feel the fire that only you ignite. You are my soul, my passion, and my protector. Every touch we share is a memory I treasure. I can't wait to be in your arms.
                 <br><br>
-                <span style="font-size: 2rem; color: #ff4d6d; display: block; text-align: center;">Always Yours, <br> Huzaifa Sarmani ❤️</span>
-            </div>
+                <span style="font-size: 1.8rem; color: #ff0033; display: block; text-align: center; font-family: 'Dancing Script';">Always Yours ❤️</span>
+            </p>
+            <button class="btn" onclick="nextPage('p7', 'p8')">One last thing... 🎁</button>
+        </div>
+
+        <div id="p8" class="page">
+            <h1 style="font-size: 3.5rem;">I LOVE YOU POOKIE! ❤️</h1>
+            <span class="kiss-anim">💋</span>
+            <p class="text" style="font-size: 2rem; font-family: 'Dancing Script';">Ummmmmmmmah!!!</p>
+            <div style="font-size: 4rem;">💐🌹🌷</div>
+            <p class="text" style="color: #ff4d6d; font-weight: bold;">Flowers for you, my King! 👑</p>
         </div>
 
     </div>
@@ -86,13 +96,7 @@
         }
 
         function wrongAnswer() {
-            const responses = [
-                "Wrong! Do you even love me, Hubby? 😤",
-                "Try again, my forgetful King! 😜",
-                "Nope! Think about what we do when we're alone... ❌",
-                "Focus, Handsome! 🧠🔥"
-            ];
-            alert(responses[Math.floor(Math.random() * responses.length)]);
+            alert("Wrong! Focus on my desires, Handsome! 🧠🔥");
         }
     </script>
 </body>
