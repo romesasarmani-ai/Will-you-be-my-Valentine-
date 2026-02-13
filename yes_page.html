@@ -1,34 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./yes_style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Love Challenge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
     <style>
-        .love-letter { background: #fff5f5; border: 2px dashed #ff4d6d; padding: 25px; border-radius: 15px; margin-top: 20px; color: #ff4d6d; font-family: 'Comic Sans MS', cursive; box-shadow: 0 4px 15px rgba(255, 77, 109, 0.2); }
-        .memory-box { margin-top: 20px; text-align: left; background: white; padding: 15px; border-radius: 10px; }
-        .rose { font-size: 35px; animation: shake 2s infinite; display: inline-block; }
-        @keyframes shake { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(20deg); } }
+        body { background: #120507; color: #ffb3c1; font-family: 'Dancing Script', cursive; text-align: center; padding: 20px; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow-x: hidden; }
+        .container { max-width: 500px; width: 90%; background: rgba(255, 255, 255, 0.03); padding: 40px; border-radius: 30px; border: 1px solid #ff4d6d; box-shadow: 0 0 30px rgba(255, 77, 109, 0.1); }
+        h1 { font-family: 'Great Vibes', cursive; font-size: 3rem; color: #ff4d6d; margin-bottom: 20px; }
+        .page { display: none; animation: slideIn 0.8s ease-out; }
+        .active { display: block; }
+        .btn { background: #ff4d6d; color: white; border: none; padding: 12px 25px; border-radius: 30px; font-size: 1.2rem; cursor: pointer; margin: 10px; font-family: 'Dancing Script'; transition: 0.4s; width: 80%; }
+        .btn:hover { background: #c9184a; transform: scale(1.05); box-shadow: 0 0 15px #ff4d6d; }
+        .text { font-size: 1.4rem; line-height: 1.5; margin-bottom: 25px; color: #ffe5ec; }
+        .spicy { color: #ff4d6d; font-style: italic; font-weight: bold; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <div class="tenor-gif-embed" data-postid="25322200" data-share-method="host" data-aspect-ratio="1" data-width="100%"></div>
-        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-
-        <h1>Yayyy! I Knew You'd Say Yes! <span class="rose">🌹</span></h1>
         
-        <div class="love-letter">
-            <h2>To My Dearest Mian G ❤️</h2>
-            <p>Main bohot khush-naseeb hoon ke ap meri life mein hn. Ap k saath bitaya har pal mere liye sabse bada gift hai.</p>
-            
-            <div class="memory-box">
-                <h3 style="color: #c9184a;">Our Beautiful Memories ✨</h3>
-                <p>📍 Pehli baar milna aur wo feeling...</p>
-                <p>📍 Hamari lambi baatein aur mazaq...</p>
-                <p>📍 Har mushkil mein ek doosre ka saath dena...</p>
-            </div>
-
-            <p style="margin-top: 20px; font-size: 1.2em;"><strong>Always Yours, <br> Huzaifa Sarmani ❤️</strong></p>
+        <div id="p1" class="page active">
+            <h1>Ready for the Game? ❤️</h1>
+            <p class="text">Since you said YES, you now have to prove how well you know us. Are you ready to unlock my heart (and maybe more)? 😉</p>
+            <button class="btn" onclick="nextPage('p1', 'p2')">I'm Ready, Baby! 🔥</button>
         </div>
+
+       <div id="p2" class="page">
+    <h1>Level 1: Sweet Memories 🍦</h1>
+    <p class="text">What is that one ice cream flavor that I started loving just because of you?</p>
+    <button class="btn" onclick="nextPage('p2', 'p3')">Caramel Crunch 🍯✨</button> <button class="btn" onclick="wrongAnswer()">Chocolate (My old favorite!) 🍫</button>
+    <button class="btn" onclick="wrongAnswer()">Strawberry 🍓</button>
+</div>
+
+ <div id="p3" class="page">
+            <h1>Level 2: The Forbidden Meal 😈</h1>
+            <p class="text">What is that one "Special Meal" that we both can never say NO to? (Think carefully... it's not on a plate!)</p>
+            <button class="btn" onclick="nextPage('p3', 'p4')">Tasting your lips & devouring YOU 💋🔥</button>
+            <button class="btn" onclick="wrongAnswer()">Pizza or Burgers 🍔</button>
+            <button class="btn" onclick="wrongAnswer()">Biryani 🍛</button>
+
+        <div id="p4" class="page">
+            <h1>Level 3: The Spark 🔥</h1>
+            <p class="text">Close your eyes... can you still feel the heat of our <span class="spicy">First Kiss?</span> The way my lips felt against yours...</p>
+            <p class="text">It wasn't just a touch, it was a promise. Do you remember how fast your heart was beating?</p>
+            <button class="btn" onclick="nextPage('p4', 'p5')">I can still feel it... ❤️</button>
+        </div>
+
+        <div id="p5" class="page">
+            <h1>Level 4: The Touch 🖐️</h1>
+            <p class="text">Remember the first time my hands explored your skin? The shivers, the breathlessness...</p>
+            <p class="text">Every touch of mine is a silent "I love you" and every reaction of yours makes me want you more.</p>
+            <button class="btn" onclick="nextPage('p5', 'p6')">Don't stop thinking... 😉</button>
+        </div>
+
+        <div id="p6" class="page">
+            <h1>Level 5: Pure Desire 😈</h1>
+            <p class="text">I want to feel you close to me right now. The way you look at me when you want to be kissed...</p>
+            <p class="text">You have no idea what you do to me. You are my most beautiful addiction.</p>
+            <button class="btn" onclick="nextPage('p6', 'p7')">The Final Secret... 🗝️</button>
+        </div>
+
+        <div id="p7" class="page">
+            <h1>To My ForeverMiaN G ❤️</h1>
+            <p class="text" style="font-size: 1.2rem; text-align: left;">
+                My Dearest, <br><br>
+                Through these pages, I wanted you to feel the same fire that burns in my heart for you. You are the rhythm to my soul and the desire in my veins. <br><br>
+                Every memory we've made is a treasure, and every touch we've shared is a dream. I promise to keep loving you, teasing you, and wanting you forever.
+                <br><br>
+                <span style="font-size: 2rem; color: #ff4d6d; display: block; text-align: center;">Always Yours, <br> Huzaifa Sarmani ❤️</span>
+            </p>
+        </div>
+
     </div>
+
+    <script>
+        function nextPage(curr, next) {
+            document.getElementById(curr).classList.remove('active');
+            document.getElementById(next).classList.add('active');
+            window.scrollTo(0,0);
+        }
+
+        function wrongAnswer() {
+            const responses = [
+                "Wrong! Do you even love me? 😤",
+                "Try again, my forgetful king! 😜",
+                "Nope! That's not us at all! ❌",
+                "Focus baby, focus! 🧠🔥"
+            ];
+            alert(responses[Math.floor(Math.random() * responses.length)]);
+        }
+    </script>
 </body>
 </html>
