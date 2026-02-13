@@ -11,7 +11,7 @@
         h1 { font-family: 'Great Vibes', cursive; font-size: 3rem; color: #ff4d6d; margin-bottom: 20px; }
         .page { display: none; animation: slideIn 0.8s ease-out; }
         .active { display: block; }
-        .btn { background: #ff4d6d; color: white; border: none; padding: 12px 25px; border-radius: 30px; font-size: 1.2rem; cursor: pointer; margin: 10px; font-family: 'Dancing Script'; transition: 0.4s; width: 80%; }
+        .btn { background: #ff4d6d; color: white; border: none; padding: 12px 25px; border-radius: 30px; font-size: 1.2rem; cursor: pointer; margin: 10px; font-family: 'Dancing Script'; transition: 0.4s; width: 85%; }
         .btn:hover { background: #c9184a; transform: scale(1.05); box-shadow: 0 0 15px #ff4d6d; }
         .text { font-size: 1.4rem; line-height: 1.5; margin-bottom: 25px; color: #ffe5ec; }
         .spicy { color: #ff4d6d; font-style: italic; font-weight: bold; }
@@ -23,24 +23,26 @@
     <div class="container">
         
         <div id="p1" class="page active">
-            <h1>Ready for the Game? ❤️</h1>
-            <p class="text">Since you said YES, you now have to prove how well you know us. Are you ready to unlock my heart (and maybe more)? 😉</p>
+            <h1>My King, My Everything... ❤️</h1>
+            <p class="text">Since you said YES, you now have to prove how well you know 'US'. Are you ready to unlock my heart (and maybe more)? 😉</p>
             <button class="btn" onclick="nextPage('p1', 'p2')">I'm Ready, Baby! 🔥</button>
         </div>
 
-       <div id="p2" class="page">
-    <h1>Level 1: Sweet Memories 🍦</h1>
-    <p class="text">What is that one ice cream flavor that I started loving just because of you?</p>
-    <button class="btn" onclick="nextPage('p2', 'p3')">Caramel Crunch 🍯✨</button> <button class="btn" onclick="wrongAnswer()">Chocolate (My old favorite!) 🍫</button>
-    <button class="btn" onclick="wrongAnswer()">Strawberry 🍓</button>
-</div>
+        <div id="p2" class="page">
+            <h1>Level 1: Sweet Memories 🍦</h1>
+            <p class="text">What is that one ice cream flavor that I started loving just because of you?</p>
+            <button class="btn" onclick="nextPage('p2', 'p3')">Caramel Crunch 🍯✨</button>
+            <button class="btn" onclick="wrongAnswer()">Chocolate (My old favorite!) 🍫</button>
+            <button class="btn" onclick="wrongAnswer()">Strawberry 🍓</button>
+        </div>
 
- <div id="p3" class="page">
+        <div id="p3" class="page">
             <h1>Level 2: The Forbidden Meal 😈</h1>
             <p class="text">What is that one "Special Meal" that we both can never say NO to? (Think carefully... it's not on a plate!)</p>
             <button class="btn" onclick="nextPage('p3', 'p4')">Tasting your lips & devouring YOU 💋🔥</button>
             <button class="btn" onclick="wrongAnswer()">Pizza or Burgers 🍔</button>
             <button class="btn" onclick="wrongAnswer()">Biryani 🍛</button>
+        </div>
 
         <div id="p4" class="page">
             <h1>Level 3: The Spark 🔥</h1>
@@ -64,14 +66,14 @@
         </div>
 
         <div id="p7" class="page">
-            <h1>To My ForeverMiaN G ❤️</h1>
-            <p class="text" style="font-size: 1.2rem; text-align: left;">
+            <h1>To My Forever Mian G ❤️</h1>
+            <div class="text" style="font-size: 1.2rem; text-align: left;">
                 My Dearest, <br><br>
                 Through these pages, I wanted you to feel the same fire that burns in my heart for you. You are the rhythm to my soul and the desire in my veins. <br><br>
                 Every memory we've made is a treasure, and every touch we've shared is a dream. I promise to keep loving you, teasing you, and wanting you forever.
                 <br><br>
                 <span style="font-size: 2rem; color: #ff4d6d; display: block; text-align: center;">Always Yours, <br> Huzaifa Sarmani ❤️</span>
-            </p>
+            </div>
         </div>
 
     </div>
@@ -85,10 +87,10 @@
 
         function wrongAnswer() {
             const responses = [
-                "Wrong! Do you even love me? 😤",
-                "Try again, my forgetful king! 😜",
-                "Nope! That's not us at all! ❌",
-                "Focus baby, focus! 🧠🔥"
+                "Wrong! Do you even love me, Hubby? 😤",
+                "Try again, my forgetful King! 😜",
+                "Nope! Think about what we do when we're alone... ❌",
+                "Focus, Handsome! 🧠🔥"
             ];
             alert(responses[Math.floor(Math.random() * responses.length)]);
         }
